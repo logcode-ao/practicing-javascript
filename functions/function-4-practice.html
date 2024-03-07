@@ -1,0 +1,32 @@
+<script>
+  function mostra(frase) {
+    document.write(frase);
+    document.write("<br>");
+  }
+
+  var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+  var empates = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+  var vitorias1 = prompt("Quantos jogos o LV Futebol Clube venceu?");
+  var empates1 = prompt("Quantos jogos o LV Futebol Clube empatou?");
+
+  function calcularPontos(vitoria, empate) {
+    ponto = vitoria * 3 + parseInt(empate);
+    return ponto;
+  }
+
+  pontos = calcularPontos(vitorias, empates);
+  pontos1 = calcularPontos(vitorias1, empates1);
+
+  mostra("Nosso time tem " + pontos + " pontos!");
+  mostra("O time adversario tem " + pontos1 + " pontos!");
+
+  if (pontos > pontos1) {
+    mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+  }
+  if (pontos < pontos1) {
+    mostra("Nosso time está indo PIOR que o Livros Velhos!");
+  }
+  if (pontos == pontos1) {
+    mostra("Nosso time está EMPATADO com o Livros Velhos!");
+  }
+</script>
