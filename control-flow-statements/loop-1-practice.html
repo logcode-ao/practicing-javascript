@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var numeroPensado = Math.round(Math.random() * 10);
+      var numeroDaTentativa = 1;
+
+      while (numeroDaTentativa <= 3) {
+        var chute = prompt("Qual você acha que é?");
+
+        if (chute == numeroPensado) {
+          alert("Parabéns, você acertou!");
+          break;
+        } else {
+          alert("Você errou. Será que ainda tem mais tentativas?");
+        }
+
+        numeroDaTentativa++;
+      }
+    </script>
+  </body>
+</html>

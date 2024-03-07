@@ -1,0 +1,56 @@
+<script type="text/javascript">
+  for (var linha = 0; linha < 3; linha = linha + 1) {
+    for (var coluna = 0; coluna < 10; coluna = coluna + 1) {
+      document.write("*");
+    }
+    document.write("<br>");
+  }
+
+  document.write("--------------------------------------------<br>");
+
+  for (var tamanho = 1; tamanho <= 10; tamanho++) {
+    for (var i = 1; i <= 10; i++) {
+      document.write("*");
+    }
+    document.write("<div></div>");
+  }
+
+  document.write("--------------------------------------------<br>");
+
+  for (var i = 1; i <= 9; i++) {
+    for (var c = 1; c <= i; c++) {
+      document.write("*");
+    }
+
+    document.write("<br>");
+  }
+  document.write("--------------------------------------------<br>");
+  var meio = 9;
+  var meio1 = 9;
+  var direita = 0;
+  esquerda = 10;
+  for (var i = 1; i <= 10; i++) {
+    for (var c = 1; c <= 1; c++) {
+      for (var d = direita; d >= 1; d--) {
+        document.write("_");
+      }
+      direita++;
+      document.write("*");
+      for (var m = meio; m >= 1; m--) {
+        document.write("_");
+      }
+      meio--;
+      for (var m1 = meio1; m1 >= 1; m1--) {
+        document.write("_");
+      }
+      meio1--;
+      document.write("*");
+      for (var e = esquerda; e <= 9; e++) {
+        document.write("_");
+      }
+      esquerda--;
+    }
+
+    document.write("<br>");
+  }
+</script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if
+      let age = 16;
+      let state = "CA";
+
+      if (state == "CA") {
+        if (age >= 16) {
+          console.log("You can drive.");
+        }
+      }
+
+      // if else
+
+      //let age = 16; (why?)
+      let country = "USA";
+
+      if (age >= 16 && country === "USA") {
+        console.log("You can get a driving license.");
+      } else {
+        console.log("You are not eligible to get a driving license.");
+      }
+
+      // if else if
+      let weight = 70; // kg
+      let height = 1.72; // meter
+
+      // calculate the body mass index (BMI)
+      let bmi = weight / (height * height);
+
+      let weightStatus;
+
+      if (bmi < 18.5) {
+        weightStatus = "Underweight";
+      } else if (bmi >= 18.5 && bmi <= 24.9) {
+        weightStatus = "Healthy Weight";
+      } else if (bmi >= 25 && bmi <= 29.9) {
+        weightStatus = "Overweight";
+      } else {
+        weightStatus = "Obesity";
+      }
+
+      console.log(weightStatus);
+
+      //Ternary
+      age = 18;
+      let message;
+
+      age >= 16
+        ? (message = "You can drive.")
+        : (message = "You cannot drive.");
+
+      console.log(message);
+
+      message = age >= 16 ? "You can drive." : "You cannot drive.";
+
+      console.log(message);
+
+      /*case*/
+      let authenticated = false;
+      let nextURL = authenticated
+        ? (alert("You will redirect to admin area"), "/admin")
+        : (alert("Access denied"), "/403");
+
+      // redirect to nextURL here
+      console.log(nextURL); // '/admin'
+
+      //switch
+      let day = 3;
+      let dayName;
+
+      switch (day) {
+        case 1:
+          dayName = "Sunday";
+          break;
+        case 2:
+          dayName = "Monday";
+          break;
+        case 3:
+          dayName = "Tuesday";
+          break;
+        case 4:
+          dayName = "Wednesday";
+          break;
+        case 5:
+          dayName = "Thursday";
+          break;
+        case 6:
+          dayName = "Friday";
+          break;
+        case 7:
+          dayName = "Saturday";
+          break;
+        default:
+          dayName = "Invalid day";
+      }
+
+      console.log(dayName); // Tuesday
+    </script>
+  </body>
+</html>

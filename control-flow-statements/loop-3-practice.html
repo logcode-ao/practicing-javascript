@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 1 - Loop</title>
+  </head>
+  <body>
+    <script>
+      const MIN = 1;
+      const MAX = 10;
+
+      let secretNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+
+      let guesses = 0;
+      let hint = "";
+      let number = 0;
+
+      do {
+        let input = prompt(
+          `Please enter a number between ${MIN} and ${MAX}` + hint
+        );
+
+        number = parseInt(input);
+
+        guesses++;
+
+        if (number > secretNumber) {
+          hint = ", and less than " + number;
+        } else if (number < secretNumber) {
+          hint = ", and greater than " + number;
+        } else if (number == secretNumber) {
+          alert(`Bravo! you're correct after ${guesses} guess(es).`);
+        }
+      } while (number != secretNumber);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var mostra = function (frase) {
+        document.write(frase + "<br>");
+      };
+
+      var multiplicador = 1;
+      var valor = parseInt(prompt("queres tabuada de quanto?"));
+
+      while (multiplicador <= 10) {
+        mostra(
+          valor +
+            " vezes " +
+            multiplicador +
+            "é igual a" +
+            valor * multiplicador
+        );
+        multiplicador++;
+      }
+    </script>
+  </body>
+</html>
