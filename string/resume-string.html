@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String - Content</title>
+  </head>
+  <body>
+    JavaScript strings are primitive values. Also, strings are immutable. It
+    means that if you modify a string, you will always get a new string. The
+    original string doesn't change. To create literal strings, you use either
+    single quotes (') or double quotes (") like this:
+    <code lang="JavaScript"> let str = 'Hi'; let greeting = "Hello"; </code>
+
+    <h2>String Methods</h2>
+    <div>
+      <p>
+        <strong>charAt()</strong>: Retorna o caractere na posição especificada
+        de uma string.
+      </p>
+      <code>"hello".charAt(0); // Retorna "h"</code>
+      <p>
+        <strong>charCodeAt()</strong>: Retorna o valor Unicode do caractere na
+        posição especificada de uma string.
+      </p>
+      <code>"hello".charCodeAt(1); // Retorna 101 (valor Unicode de "e")</code>
+      <p>
+        <strong>concat()</strong>: Combina o texto de duas ou mais strings e
+        retorna uma nova string.
+      </p>
+      <code>"Hello,".concat(" world!"); // Retorna "Hello, world!"</code>
+      <p>
+        <strong>includes()</strong>: Verifica se uma string contém outra string.
+        Retorna true ou false.
+      </p>
+      <code>"Hello, world!".includes("world"); // Retorna true</code>
+      <p>
+        <strong>endsWith()</strong>: Verifica se uma string termina com outra
+        string. Retorna true ou false.
+      </p>
+      <code>"Hello, world!".endsWith("world!"); // Retorna true</code>
+      <p>
+        <strong>fromCharCode()</strong>: Converte valores Unicode em caracteres.
+      </p>
+      <code>String.fromCharCode(65); // Retorna "A"</code>
+      <p>
+        <strong>indexOf()</strong>: Retorna a posição da primeira ocorrência de
+        uma string dentro de outra string.
+      </p>
+      <code>"Hello, world!".indexOf("world"); // Retorna 7</code>
+      <p>
+        <strong>lastIndexOf()</strong>: Retorna a posição da última ocorrência
+        de uma string dentro de outra string.
+      </p>
+      <code>"Hello, world, hello!".lastIndexOf("hello"); // Retorna 13</code>
+      <p>
+        <strong>localeCompare()</strong>: Compara duas strings em uma ordem de
+        classificação específica.
+      </p>
+      <code>"a".localeCompare("b"); // Retorna -1</code>
+      <p>
+        <strong>match()</strong>: Recupera as correspondências de uma string em
+        relação a uma expressão regular.
+      </p>
+      <code>"Hello, world!".match(/world/); // Retorna ["world"]</code>
+      <p>
+        <strong>padEnd()</strong>: Preenche o final de uma string com um
+        determinado número de caracteres.
+      </p>
+      <code>"Hello".padEnd(10, " world!"); // Retorna "Hello worl"</code>
+      <p>
+        <strong>padStart()</strong>: Preenche o início de uma string com um
+        determinado número de caracteres.
+      </p>
+      <code>"world!".padStart(10, "Hello, "); // Retorna "Hello, world!"</code>
+      <p>
+        <strong>repeat()</strong>: Retorna uma nova string contendo a string
+        original repetida um determinado número de vezes.
+      </p>
+      <code>"hello ".repeat(3); // Retorna "hello hello hello "</code>
+      <p>
+        <strong>replace()</strong>: Substitui parte de uma string por outra
+        string.
+      </p>
+      <code
+        >"Hello, world!".replace("world", "everyone"); // Retorna "Hello,
+        everyone!"</code
+      >
+      <p>
+        <strong>search()</strong>: Pesquisa uma string para encontrar uma
+        correspondência com uma expressão regular e retorna a posição da
+        correspondência.
+      </p>
+      <code>"Hello, world!".search(/world/); // Retorna 7</code>
+      <p>
+        <strong>slice()</strong>: Extrai uma parte de uma string e retorna uma
+        nova string.
+      </p>
+      <code>"Hello, world!".slice(7, 12); // Retorna "world"</code>
+      <p>
+        <strong>split()</strong>: Divide uma string em substrings e retorna um
+        array.
+      </p>
+      <code>"Hello, world!".split(", "); // Retorna ["Hello", "world!"]</code>
+      <p>
+        <strong>startsWith()</strong>: Verifica se uma string começa com outra
+        string. Retorna true ou false.
+      </p>
+      <code>"Hello, world!".startsWith("Hello"); // Retorna true</code>
+      <p>
+        <strong>substr()</strong>: Extrai caracteres de uma string, começando em
+        uma posição especificada e por uma quantidade determinada de caracteres.
+      </p>
+      <code>"Hello, world!".substr(7, 5); // Retorna "world"</code>
+      <p>
+        <strong>substring()</strong>: Extrai os caracteres entre duas posições
+        em uma string.
+      </p>
+      <code>"Hello, world!".substring(7, 12); // Retorna "world"</code>
+      <p>
+        <strong>toLocaleLowerCase()</strong>: Converte todos os caracteres de
+        uma string em letras minúsculas, de acordo com a localidade.
+      </p>
+      <code
+        >"Hello, WORLD!".toLocaleLowerCase(); // Retorna "hello, world!"</code
+      >
+      <p>
+        <strong>toLocaleUpperCase()</strong>: Converte todos os caracteres de
+        uma string em letras maiúsculas, de acordo com a localidade.
+      </p>
+      <code
+        >"hello, world!".toLocaleUpperCase(); // Retorna "HELLO, WORLD!"</code
+      >
+      <p>
+        <strong>toLowerCase()</strong>: Converte todos os caracteres de uma
+        string em letras minúsculas.
+      </p>
+      <code>"Hello, WORLD!".toLowerCase(); // Retorna "hello, world!"</code>
+      <p>
+        <strong>toString()</strong>: Retorna uma string representando o objeto
+        especificado.
+      </p>
+      <code
+        >var str = new String("Hello, world!"); str.toString(); // Retorna
+        "Hello, world!"</code
+      >
+      <p>
+        <strong>toUpperCase()</strong>: Converte todos os caracteres de uma
+        string em letras maiúsculas.
+      </p>
+      <code>"hello, world!".toUpperCase(); // Retorna "HELLO, WORLD!"</code>
+      <p>
+        <strong>trim()</strong>: Remove os espaços em branco do início e do
+        final de uma string.
+      </p>
+      <code>" Hello, world! ".trim(); // Retorna "Hello, world!"</code>
+      <p>
+        <strong>valueOf()</strong>: Retorna o valor primitivo de um objeto
+        String.
+      </p>
+      <code
+        >var str = new String("Hello, world!"); str.valueOf(); // Retorna
+        "Hello, world!"</code
+      >
+    </div>
+  </body>
+</html>
