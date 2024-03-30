@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Objectos -
+
+    <script>
+      const pessoa = {
+        name: "John",
+        idade: 20,
+        telefone: null,
+        ocupacao: "prohramador",
+
+        edereco: {
+          rua: "X",
+          numero: 34,
+        },
+
+        comer: function (params) {
+          return params;
+        },
+
+        desejos: ["comer", ""],
+      };
+
+      console.log(pessoa.name);
+      console.log(pessoa.ocupacao);
+
+      pessoa.name = "Garcia";
+
+      console.log(pessoa.comer());
+
+      pessoa.edereco.rua = "Rua 11";
+
+      console.log(pessoa.name);
+
+      console.log(pessoa.edereco.rua);
+
+      console.log(pessoa.hooby);
+
+      //definir o que não está
+      pessoa.hooby = "Programar";
+
+      //Apagar
+      delete pessoa.hooby;
+
+      console.table(pessoa);
+    </script>
+  </body>
+</html>
