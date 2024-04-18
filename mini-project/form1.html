@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Contato</title>
+    <style>
+      /* Estilos para o formulário */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="date"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulário de Contato</h1>
+    <form action="processar_formulario.php" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="data_nascimento">Data de Nascimento:</label>
+      <input type="date" id="data_nascimento" name="data_nascimento" required />
+
+      <label for="ocupacao">Ocupação:</label>
+      <input type="text" id="ocupacao" name="ocupacao" required />
+
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <script>
+      document
+        .querySelector("input#nome")
+        .setAttribute("value", "José Figuereido");
+
+      document
+        .querySelector("input#data_nascimento")
+        .setAttribute("value", "1985-10-10");
+
+      document
+        .querySelector("input#ocupacao")
+        .setAttribute("value", "Professor");
+
+      document.querySelector("textarea#descricao").innerHTML =
+        "Ensinar IA no INSTIC com muito riso ";
+    </script>
+  </body>
+</html>

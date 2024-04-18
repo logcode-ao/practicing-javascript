@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .card {
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-content {
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      .name {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .position {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img id="img" alt="User Photo" />
+      <div class="card-content"></div>
+    </div>
+
+    <script>
+      const image = document.getElementById("img");
+      image.setAttribute("src", "./foto.jpg");
+
+      const element = document.querySelector("div.card-content");
+
+      element.innerHTML = `
+        <h2 class='name'>Dars</h2>
+        <p class='position'>Delegado</p>
+        `;
+    </script>
+  </body>
+</html>
