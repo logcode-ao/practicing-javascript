@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Automático</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        height: 100vh;
+      }
+      span {
+        font-size: small;
+        color: #ccc;
+        font-weight: bolder;
+      }
+      .main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .form-input {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-bottom: 20px;
+        label {
+          font-size: medium;
+          color: #ccc;
+          font-weight: bolder;
+        }
+        input {
+          padding: 10px;
+          font-size: large;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          outline-color: orangered;
+          box-shadow: 0 0 10px #aaa;
+        }
+      }
+
+      .image div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 80px;
+          max-width: 80px;
+          max-height: 80px;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        i {
+          width: 25px;
+          height: 25px;
+          background-color: orangered;
+          border-radius: 50%;
+        }
+      }
+
+      .form-switch {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+
+        label {
+          font-size: large;
+          font-weight: 700;
+          color: #888;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <form>
+        <div class="form-input">
+          <label for="desc">Description</label>
+          <input type="text" id="desc" />
+        </div>
+
+        <div class="form-input">
+          <label for="topic">Topic</label> <input type="text" id="topic" />
+        </div>
+
+        <div class="image">
+          <span>colaborators</span>
+          <div>
+            <img src="" alt="user" />
+            <i></i>
+          </div>
+        </div>
+
+        <div class="form-switch">
+          <span>Colaborators can</span>
+          <label for="add">
+            Add more people
+            <input type="checkbox" name="add" id="add" />
+          </label>
+        </div>
+
+        <div class="form-switch">
+          <span>People can</span>
+          <label for="request">
+            Request to join
+            <input type="checkbox" name="request" id="request" />
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="politic" />
+          <label for="politic"></label>
+        </div>
+
+        <div class="form-button">
+          <button>Continue</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
