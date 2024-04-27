@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <form action="">
+    <label for="nome">Nome:
+      <input type="text" placeholder="Nome" id="nome" required>
+    </label>
+    <label for="email">Email:
+      <input type="email" placeholder="nome@gmail.com" id="email" required>
+    </label>
+    <label for="Senha">Senha:
+      <input type="password" placeholder="Senha" id="senha" required>
+    </label>
+    <button onclick="criarFom(event)">Enviar</button>
+  </form>
+  <div class="modal">
+    <div class="cardModal"></div>
+  </div>
+</body>
+<script src="index.js"></script>
+
+</html>
