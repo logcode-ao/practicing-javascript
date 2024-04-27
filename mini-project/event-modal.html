@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Event</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <main>
+      <button class="button" onclick="openModal()">Mostrar</button>
+
+      <div class="modal-overlay">
+        <button class="modal-close" onclick="closeModal()">X</button>
+        <div class="modal-content">olá Mundo!</div>
+      </div>
+    </main>
+
+    <script>
+      const modalOverlay = document.querySelector(".modal-overlay");
+
+      function openModal() {
+        modalOverlay.classList.add("open");
+      }
+
+      function closeModal() {
+        modalOverlay.classList.remove("open");
+      }
+    </script>
+  </body>
+</html>
