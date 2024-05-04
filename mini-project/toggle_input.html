@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle input Visibility</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign In</h1>
+      <form onsubmit="handlesubmit(event)">
+        <p>
+          <label for="username">User Name:</label>
+          <input type="text" name="username" id="username" />
+        </p>
+
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+          <i
+            class="bi bi-eye-slash"
+            id="togglePassword"
+            onclick="togglevisibilitypassword()"
+          ></i>
+        </p>
+
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+
+    <script>
+      const password = document.querySelector("#password");
+      const togglePassword = document.querySelector("#togglePassword");
+
+      //prevent Submit
+      function handlesubmit(event) {
+        event.preventDefault();
+      }
+
+      function togglevisibilitypassword() {
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+
+        password.setAttribute("type", type);
+
+        togglePassword.classList.toggle("bi-eye");
+      }
+    </script>
+  </body>
+</html>
